@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e2749;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #2a3664;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+}
+
+.add-task-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #a8b3e6;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f4f87;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#taskInput::placeholder {
+    color: #cccccc;
+}
+
+#prioritySelect {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f4f87;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#addTaskBtn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5c77ce;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #7d93e0;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #3f4f87;
+    transition: background-color 0.3s ease;
+}
+
+#taskList li.high {
+    border-left: 5px solid #ff6347;
+}
+
+#taskList li.medium {
+    border-left: 5px solid #ffd700;
+}
+
+#taskList li.low {
+    border-left: 5px solid #90ee90;
+}
+
+#taskList li:hover {
+    background-color: #4f63a7;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-word;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .add-task-section {
+        flex-direction: column;
+    }
+
+    #prioritySelect, #addTaskBtn {
+        width: 100%;
+    }
+}
