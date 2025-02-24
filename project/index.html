@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do List</h1>
+            <nav>
+                <button id="today-btn" class="nav-btn active">Today</button>
+                <button id="upcoming-btn" class="nav-btn">Upcoming</button>
+                <button id="completed-btn" class="nav-btn">Completed</button>
+            </nav>
+        </header>
+        <main>
+            <section id="today" class="task-section">
+                <h2>Today's Tasks</h2>
+                <div class="task-input">
+                    <input type="text" id="new-task-input" placeholder="Add a new task...">
+                    <button id="add-task-btn">Add</button>
+                </div>
+                <ul id="today-task-list" class="task-list">
+                    <!-- Today's tasks will be added here -->
+                </ul>
+            </section>
+
+            <section id="upcoming" class="task-section" style="display: none;">
+                <h2>Upcoming Tasks</h2>
+                <div class="task-input">
+                    <input type="text" id="new-upcoming-task-input" placeholder="Add an upcoming task...">
+                    <button id="add-upcoming-task-btn">Add</button>
+                </div>
+
+                <ul id="upcoming-task-list" class="task-list">
+                  <!-- Upcoming tasks will be added here -->
+                </ul>
+            </section>
+
+            <section id="completed" class="task-section" style="display: none;">
+                <h2>Completed Tasks</h2>
+                <ul id="completed-task-list" class="task-list">
+                    <!-- Completed tasks will be added here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
